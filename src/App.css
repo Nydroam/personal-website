@@ -1,3 +1,102 @@
+.flex{
+  display:flex;
+  overflow: hidden;
+}
+.card{
+  margin-top:100px;
+  display:inline-block;
+  width:336px;
+  /*height:192px;*/
+  background-color:white;
+  border-radius:2px;
+  box-shadow: 5px 5px 10px ;
+  padding-bottom:15px;
+}
+.header{
+  margin-top:15px;
+  font-size:30px;
+  font-family: "Open Sans";
+}
+.line{
+  border-top: 1px solid black;
+  width:77%;
+  margin-top: 6px;
+  margin-bottom: 4px;
+}
+.fa {
+  position: relative;
+  top:5px;
+  font-size: 30px;
+  padding:3px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  color:white;
+  transform: scale(0.5);  
+}
+.fa-linkedin {
+  border-radius:5px;
+  background: #007bb5;
+}
+.fa-github{
+  color:black;
+  transform: scale(0.7);
+}
+.desc{
+  margin-top:5px;
+  font-size: 16px;
+  font-family: "Open Sans";
+}
+h1,h2,h3,h4,h5,h6{
+  margin-top:0;
+  margin-bottom:0;
+}
+.heading{
+  font-size: 32px;
+  font-weight: bold;
+}
+.left{
+  width:320px;
+  padding-left:20px;
+  height: 100vh;
+  text-align:left;
+  position:relative;
+}
+.overflow{
+  height: calc(100% - 250px);
+  overflow:auto;
+}
+.left .heading{
+  margin-top:5px;
+  font-family: "Open Sans";
+}
+.left .links{
+  position:absolute;
+  bottom:0px;
+  background-color:white;
+  padding-bottom:10px;
+  width:100%;
+}
+.right{
+  width:calc(100% - 320px);
+  height:100vh;
+  background-color:black;
+  text-align:left;
+  padding-left: 20px;
+  position:relative;
+}
+.right .heading{
+  color:white;
+  font-family: 'Comic Sans MS';
+}
+
+
+.bio{
+  font-size: 18px;
+  width:calc(100% - 20px);
+  text-align:left;
+  margin-top:10px;
+}
 .App {
   text-align: center;
 }

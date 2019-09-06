@@ -4,21 +4,57 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App flex">
+      {/* <div className="card">
+        <div className="header">
+          Raymond Wu
+        </div>
+        <hr className="line"></hr>
+        <div className="desc">
+          Software Engineer
+        </div>
+        <div className="desc">
+          Bio | Projects
+        </div>
+        <div className="desc">
+          <a href="https://github.com/Nydroam" className="fa fa-github"></a>
+          <a href="https://linkedin.com/in/raywu17" className="fa fa-linkedin"></a>
+        </div>
+      </div> */}
+      <div className="left">
+        
+        <div className="heading">
+          <h1>Raymond</h1>
+          <h5>Frontend Developer</h5>
+          <h5>Software Engineer</h5>
+          <h5>University Senior</h5>
+        </div>
+        
+        <div className="overflow">
+        <div className="bio">
+        Raymond Wu is a fledgling developer testing the waters of the software engineering field. He views code as a versatile tool, one that can smooth out bumps in daily life as well as paint new digital vistas. 
+        </div>
+        <div className="bio">
+        He has programmed general and web applications both at the university-level and professionally and is now actively looking for full-time opportunities.
+        </div>
+        <div className="bio">
+        Raymond is a senior at Stony Brook University pursuing his Bachelor of Science in Computer Science Degree.
+        </div>
+        </div>
+        <div className="links">
+        <a href="https://github.com/Nydroam" className="fa fa-github"></a>
+          <a href="https://linkedin.com/in/raywu17" className="fa fa-linkedin"></a>
+        </div>
+      </div>
+      <div className="right">
+        <div className="heading">
+          <h1>Wu</h1>
+          <h4>Active Gamer</h4>
+          <h5>Frequent Reader</h5>
+          <h6>Lazy Creator</h6>
+        </div>
+        
+      </div>
     </div>
   );
 }
