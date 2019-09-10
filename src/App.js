@@ -21,7 +21,7 @@ function App() {
           <a href="https://linkedin.com/in/raywu17" className="fa fa-linkedin"></a>
         </div>
       </div> */}
-      <div className="left">
+      {/* <div className="left">
         
         <div className="heading">
           <h1>Raymond</h1>
@@ -45,14 +45,14 @@ function App() {
         <a href="https://github.com/Nydroam" className="fa fa-github"></a>
           <a href="https://linkedin.com/in/raywu17" className="fa fa-linkedin"></a>
         </div>
-      </div>
+      </div> */}
       <div className="right">
-        <div className="heading">
-          <h1>Wu</h1>
+        {/* <div className="heading">
+          <h1>RaymondWu</h1>
           <h3> Avid Reader </h3>
           <h3> Active Gamer</h3>
           <h3> Aspiring Creator</h3>
-        </div>
+        </div> */}
         <Bubble diameter={230} x={15} y={60} spr={3} spry={2} shake={20} shakey={15} float={false}></Bubble>
         <Bubble diameter={250} x={40} y={20} spr={3} spry={2} shake={20} shakey={15} float={false}></Bubble>
         <Bubble diameter={220} x={65} y={50} spr={3} spry={2} shake={20} shakey={15} float={false}></Bubble>
