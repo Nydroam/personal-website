@@ -1,6 +1,6 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Bubble from './components/bubble/Bubble';
 
 function App() {
   return (
@@ -49,11 +49,13 @@ function App() {
       <div className="right">
         <div className="heading">
           <h1>Wu</h1>
-          <h4>Active Gamer</h4>
-          <h5>Frequent Reader</h5>
-          <h6>Lazy Creator</h6>
+          <h3> Avid Reader </h3>
+          <h3> Active Gamer</h3>
+          <h3> Aspiring Creator</h3>
         </div>
-        
+        <Bubble diameter={230} x={15} y={60} spr={3} spry={2} shake={20} shakey={15} float={false}></Bubble>
+        <Bubble diameter={250} x={40} y={20} spr={3} spry={2} shake={20} shakey={15} float={false}></Bubble>
+        <Bubble diameter={220} x={65} y={50} spr={3} spry={2} shake={20} shakey={15} float={false}></Bubble>
       </div>
     </div>
   );

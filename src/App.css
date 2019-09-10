@@ -56,11 +56,13 @@ h1,h2,h3,h4,h5,h6{
   font-weight: bold;
 }
 .left{
+  min-width:320px;
   width:320px;
   padding-left:20px;
   height: 100vh;
   text-align:left;
   position:relative;
+  
 }
 .overflow{
   height: calc(100% - 250px);
@@ -80,22 +82,50 @@ h1,h2,h3,h4,h5,h6{
 .right{
   width:calc(100% - 320px);
   height:100vh;
-  background-color:black;
+  background-color:navy;
   text-align:left;
-  padding-left: 20px;
+  
   position:relative;
 }
 .right .heading{
+  padding-left: 20px;
+  padding-right: 20px;
+  z-index: 0;
+  /* transform: skewX(-5deg); */
   color:white;
   font-family: 'Comic Sans MS';
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  background-color: black;
 }
-
+.right .heading h1{
+  justify-content: end;
+}
+.right .heading h3{
+}
 
 .bio{
   font-size: 18px;
   width:calc(100% - 20px);
   text-align:left;
   margin-top:10px;
+}
+.bubble{
+  position: absolute;
+  border-radius: 100px;
+  width:200px;
+  height:200px;
+  text-align:center;
+  box-shadow:0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  color:white;
+}
+
+.bubble:hover{
+  transform:scale(2,2);
 }
 .App {
   text-align: center;
