@@ -2,6 +2,30 @@ import React from 'react';
 import './App.css';
 import Bubble from './components/bubble/Bubble';
 
+function generateBubbles(n) {
+  let bubbles = []
+  for (let i = 0; i < n; i++){
+    bubbles.push(<Bubble 
+      diameter={Math.random()*100 + 30} 
+      x={Math.random()*80 + 10}
+      y={Math.random()*60 + 20}
+      xspeed={Math.random()*5+5}
+      yspeed={Math.random()*30+10}
+      // spr={Math.random()*5+1}
+      // spry={Math.random()*5+1}
+      // shake={Math.random()*20+15}
+      // shakey={Math.random()*20+15}
+      float={true}>
+      </Bubble>)
+  }
+  return bubbles
+}
+
+const projects = [
+  {name:"TreeSim",
+    link:"https://github.com/Nydroam/TreeSim",
+  desc:["A simulation of a tree swaying in the wind","Made with C++ and OpenGL"]}
+]
 function App() {
   return (
     <div className="App flex">
@@ -21,10 +45,10 @@ function App() {
           <a href="https://linkedin.com/in/raywu17" className="fa fa-linkedin"></a>
         </div>
       </div> */}
-      {/* <div className="left">
+      <div className="left">
         
         <div className="heading">
-          <h1>Raymond</h1>
+          <h2>Raymond Wu</h2>
           <h5>Frontend Developer</h5>
           <h5>Software Engineer</h5>
           <h5>University Senior</h5>
@@ -45,7 +69,7 @@ function App() {
         <a href="https://github.com/Nydroam" className="fa fa-github"></a>
           <a href="https://linkedin.com/in/raywu17" className="fa fa-linkedin"></a>
         </div>
-      </div> */}
+      </div>
       <div className="right">
         {/* <div className="heading">
           <h1>RaymondWu</h1>
@@ -53,9 +77,9 @@ function App() {
           <h3> Active Gamer</h3>
           <h3> Aspiring Creator</h3>
         </div> */}
-        <Bubble diameter={230} x={15} y={60} spr={3} spry={2} shake={20} shakey={15} float={false}></Bubble>
-        <Bubble diameter={250} x={40} y={20} spr={3} spry={2} shake={20} shakey={15} float={false}></Bubble>
-        <Bubble diameter={220} x={65} y={50} spr={3} spry={2} shake={20} shakey={15} float={false}></Bubble>
+        <div className="flex flex-column">
+        {projects.map( (x) => <Bubble name={x.name} diameter={220} desc={x.desc} link={x.link}></Bubble>)}
+        </div>
       </div>
     </div>
   );

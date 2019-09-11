@@ -1,6 +1,11 @@
 .flex{
   display:flex;
-  overflow: hidden;
+  align-items:center;
+  justify-content: space-evenly;
+  width:100%;
+}
+.flex-column{
+  flex-direction: column;
 }
 .card{
   margin-top:100px;
@@ -16,6 +21,12 @@
   margin-top:15px;
   font-size:30px;
   font-family: "Open Sans";
+}
+.proj{
+  width: calc(100% - 320px);
+  font-size:30px;
+  font-family: "Open Sans";
+  color:white;
 }
 .line{
   border-top: 1px solid black;
@@ -77,15 +88,13 @@ h1,h2,h3,h4,h5,h6{
   bottom:0px;
   background-color:white;
   padding-bottom:10px;
-  width:100%;
+  width:calc(100% - 20px);
 }
 .right{
-  width:calc(100%);
+  width:calc(100% - 320px);
   height:100vh;
   background-color:navy;
   text-align:left;
-  
-  position:relative;
 }
 .right .heading{
   padding-left: 20px;
@@ -96,6 +105,7 @@ h1,h2,h3,h4,h5,h6{
   font-family: 'Comic Sans MS';
   display:flex;
   justify-content: space-between;
+  justify-items:center;
   align-items:center;
 }
 .right .heading h1{
@@ -110,22 +120,49 @@ h1,h2,h3,h4,h5,h6{
   text-align:left;
   margin-top:10px;
 }
+@keyframes sideWays { 
+  0% { 
+      margin-left:0px;
+  }
+  100% { 
+      margin-left:100px;
+  }
+}
+@keyframes animateBubble {
+  0% {
+    top:calc(100% + 300px);
+      
+  }
+  100% {
+    top:-300px;
+  }
+}
+@keyframes staticBubble{
+  0% {
+    margin-top:0px;
+  }
+  100%{
+    margin-top:20px;
+  }
+}
 .bubble{
-  position: absolute;
   border-radius: 100px;
   width:200px;
   height:200px;
   text-align:center;
+  font-size: 36px;
   box-shadow:0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
   display:flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   color:white;
+  transition: transform 1s
+  
 }
 
-.bubble:hover{
+/* .bubble:hover{
   transform:scale(2,2);
-}
+} */
 .App {
   text-align: center;
 }
