@@ -1,31 +1,49 @@
 import React from 'react';
 import './App.css';
-import Bubble from './components/bubble/Bubble';
+import treeSim from './tree-sim.png'
+import mapEditor from './map-editor.PNG'
+import dot from './dot.PNG'
+import extant from './extant.png'
+import troneline from './troneline.PNG'
 
+const cardList=[
+  {image:treeSim,
+  link:"https://github.com/Nydroam/TreeSim",
+  title:"Tree Simulation",
+  },
+  {image:mapEditor,
+  link:"https://github.com/Nydroam/map-editor",
+  title:"Map Editor",
+  },
+  {image:dot,
+  link:"https://github.com/Nydroam/Dot",
+  title:"Dot - Virtual Pet",
+  },
+  {image:extant,
+  link:"https://github.com/Nydroam/Extant",
+  title:"Extant",
+  },
+  {image:troneline,
+    link:"https://github.com/Nydroam/troneline",
+    title:"TRONELINE",
+    dark:true,
+    }
+]
+var Card = (image,link,title,dark) => {
+  dark= dark?" dark":"";
+  return <a className="card"href={link}>
+    <div className={"center" + dark}>
+      <img src={image}></img>
+    </div>
+    <div className="title">{title}</div>
+  </a>
+}
 function App() {
   return (
     <div className="App flex">
-      {/* <div className="card">
-        <div className="header">
-          Raymond Wu
-        </div>
-        <hr className="line"></hr>
-        <div className="desc">
-          Software Engineer
-        </div>
-        <div className="desc">
-          Bio | Projects
-        </div>
-        <div className="desc">
-          <a href="https://github.com/Nydroam" className="fa fa-github"></a>
-          <a href="https://linkedin.com/in/raywu17" className="fa fa-linkedin"></a>
-        </div>
-      </div> */}
-      <div className="left">
-        
+        <div className="left">
         <div className="heading">
-          <h1>Raymond</h1>
-          <h5>Frontend Developer</h5>
+          <h2>Raymond Wu</h2>
           <h5>Software Engineer</h5>
           <h5>University Senior</h5>
         </div>
@@ -45,18 +63,14 @@ function App() {
         <a href="https://github.com/Nydroam" className="fa fa-github"></a>
           <a href="https://linkedin.com/in/raywu17" className="fa fa-linkedin"></a>
         </div>
-      </div>
-      <div className="right">
-        <div className="heading">
-          <h1>Wu</h1>
-          <h3> Avid Reader </h3>
-          <h3> Active Gamer</h3>
-          <h3> Aspiring Creator</h3>
         </div>
-        <Bubble diameter={230} x={15} y={60} spr={3} spry={2} shake={20} shakey={15} float={false}></Bubble>
-        <Bubble diameter={250} x={40} y={20} spr={3} spry={2} shake={20} shakey={15} float={false}></Bubble>
-        <Bubble diameter={220} x={65} y={50} spr={3} spry={2} shake={20} shakey={15} float={false}></Bubble>
-      </div>
+        <div className="right">
+        <div className="container">
+          <div className="flex">{cardList.map(info=>Card(info.image,info.link,info.title,info.dark))} </div>
+          <div className="bottom"></div>
+          
+        </div>
+        </div>
     </div>
   );
 }
