@@ -233,12 +233,14 @@ body{
   }
   .container{
     max-height:none;
+    padding-right:20px;
   }
   .overflow{
     height:auto;
   }
   .left .links{
-    padding-bottom:10px;
+    padding-top:5px;
+    padding-bottom:15px;
     position: relative;
   }
 
