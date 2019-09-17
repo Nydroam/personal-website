@@ -29,11 +29,11 @@ const cardList=[
     dark:true,
     }
 ]
-var Card = (image,link,title,dark) => {
+var Card = (image,link,title,dark,i) => {
   dark= dark?" dark":"";
-  return <a className="card"href={link}>
+  return <a className="card" key={i}href={link}>
     <div className={"center" + dark}>
-      <img src={image}></img>
+      <img src={image} alt={title}></img>
     </div>
     <div className="title">{title}</div>
   </a>
@@ -60,13 +60,13 @@ function App() {
         </div>
         </div>
         <div className="links">
-        <a href="https://github.com/Nydroam" className="fa fa-github"></a>
-          <a href="https://linkedin.com/in/raywu17" className="fa fa-linkedin"></a>
+        <a href="https://github.com/Nydroam"><div className="fa fa-github"></div></a>
+        <a href="https://linkedin.com/in/raywu17"> <div className="fa fa-linkedin"></div></a>
         </div>
         </div>
         <div className="right">
         <div className="container">
-          <div className="flex">{cardList.map(info=>Card(info.image,info.link,info.title,info.dark))} </div>
+          <div className="flex">{cardList.map((info,i)=>Card(info.image,info.link,info.title,info.dark,i))} </div>
           <div className="bottom"></div>
           
         </div>
