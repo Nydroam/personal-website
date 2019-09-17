@@ -67,7 +67,7 @@ function App() {
         <div className="right">
         <div className="container">
           <div className="flex">{cardList.map((info,i)=>Card(info.image,info.link,info.title,info.dark,i))} </div>
-          <div className="bottom"></div>
+      
           
         </div>
         </div>

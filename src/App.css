@@ -105,17 +105,14 @@ h1,h2,h3,h4,h5,h6{
 .right{
   width:calc(100% - 325px);
   position:relative;
-  height:100vh;
+  max-height:100%;
 }
 .container{
   z-index: 0;
   overflow-y:auto;
-  max-height:100vh;
+  max-height:calc(100% - 20px);
   padding-right:15px;
   padding-top:20px;
-}
-.bottom{
-  height:20px;
 }
 .center{
   display: flex;
@@ -211,7 +208,11 @@ body{
 .App {
   font-family:"Open Sans";
   text-align: center;
-  height:100%;
+  position:absolute;
+  top:0;
+  left:0;
+  max-height:100vh;
+  height:100vh;
   overflow:hidden;
 }
 @media only screen and (max-width: 600px) {
@@ -250,9 +251,6 @@ body{
   ::-webkit-scrollbar {
     display: none;
     }
-  .bottom{
-    display:none;
-  }
 }
 
 .App-logo {
